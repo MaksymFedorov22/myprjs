@@ -8,7 +8,7 @@ def most_frequent(List):
             word = i
 
     for i in range(List.count(word)):
-        mText.hremove(word)
+        mText.remove(word)
     return word
 
 #####
@@ -38,4 +38,4 @@ while True:
         break
 
     else:
-        print("Such a task does not exist")
+        print("Такого завдання не існує")
