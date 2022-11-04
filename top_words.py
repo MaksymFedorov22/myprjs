@@ -1,14 +1,14 @@
 def most_frequent(List):
     cnt = 0
     word = List[0]
-     
     for i in List:
         cur = List.count(i)
         if(cur > cnt) and (len(i) > 3):
             cnt = cur
             word = i
 
-    mText.remove(word)
+    for i in range(List.count(word)):
+        mText.hremove(word)
     return word
 
 #####
