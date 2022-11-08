@@ -1,6 +1,6 @@
 def most_frequent(List):
     cnt = 0
-    word = List[0]
+    word = ""
     for i in List:
         cur = List.count(i)
         if(cur > cnt) and (len(i) > 3):
@@ -11,7 +11,7 @@ def most_frequent(List):
         mText.remove(word)
     return word
 
-#####
+##########
 
 while True:
     mText = input("Введіть текст: ").split()
