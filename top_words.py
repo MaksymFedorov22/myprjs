@@ -9,7 +9,7 @@ def most_frequent(List):
 
     for i in range(List.count(word)):
         mText.remove(word)
-    return word
+    return word, cnt
 
 ##########
 
@@ -19,20 +19,27 @@ while True:
     z = input("Введіть що зробити A B C exit: ")
 
     if z.lower() == "a":
+        print("топ 5 що повторюються:")
         for i in range(5):
-            print(most_frequent(mText))
+            p1, p2 = most_frequent(mText)
+            print(p1, p2)
 
     elif z.lower() == "b":
+        mText = set(mText)
+        mText = list(mText)
         mText.sort()
+        print("словник:")
         for i in range(len(mText)):
-            print(mText[i])
+            if len(mText[i]) > 3:
+                print(mText[i])
 
     elif z.lower() == "c":
         mText = set(mText)
         mText = list(mText)
         mText.sort(reverse = True, key = len)
+        print("топ 5 найдовших:")
         for i in range(5):
-            print(mText[i])
+            print(mText[i], len(mText[i]))
 
     elif z.lower() == "exit":
         break
