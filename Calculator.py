@@ -53,7 +53,11 @@ while True:
         elif opp == "*":
             res *= float(n)
         elif opp == "/":
-            res /= float(n)
+            if n != "0":
+                res /= float(n)
+            else:
+                print("<::ERR")
+                continue
         elif opp == "^":
             res0 = res
             for i in range(1, int(n)):
@@ -65,4 +69,3 @@ while True:
         print("<::ERR")
         continue
 print("\nYou exited the calculator that was made by Fedorov Maksym\n")
-print("ez"+"\nP.S. This string (^) was printed by Shcherbyna Andriy")
