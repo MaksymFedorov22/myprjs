@@ -1,8 +1,8 @@
 def most_frequent(List):
-    cnt = 0
-    word = ""
+    cnt = 0 # number of most frequent word
+    word = "" # most frequent word
     for i in List:
-        cur = List.count(i)
+        cur = List.count(i) # number of current word
         if(cur > cnt) and (len(i) > 3):
             cnt = cur
             word = i
@@ -14,7 +14,7 @@ def most_frequent(List):
 ##########
 
 while True:
-    mText = input("Введіть текст: ").split()
+    mText = input("Введіть текст: ").split() # list of inputed words
 
     z = input("Введіть що зробити A B C exit: ")
 
